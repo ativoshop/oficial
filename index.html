@@ -1,133 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atelier Lumi – Moda feminina com estilo | Blusas, Saias e Calças</title>
-  <meta name="description" content="Looks femininos selecionados: blusa branca, saia jeans e calça preta. Compre direto pela Shopee com entrega rápida e frete grátis." />
-  <meta name="author" content="Atelier Lumi" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Atelier Lumi – Moda feminina com estilo" />
-  <meta property="og:description" content="Blusa branca, saia jeans e calça preta. Looks que combinam com tudo. Compre agora na Shopee." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="images/hero.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <link rel="canonical" href="./" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preload" as="image" href="images/hero.jpg" />
-
-  <!-- JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Store",
-    "name": "Atelier Lumi",
-    "description": "Loja de roupas femininas: blusas, saias e calças.",
-    "image": "images/hero.jpg"
-  }
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atelier Belle — Moda Feminina Premium</title>
+<meta name="description" content="Loja de moda feminina com peças exclusivas: vestidos, conjuntos esportivos e looks elegantes para o dia a dia.">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <header class="nav">
-    <a href="#" class="logo">Atelier<span>Lumi</span></a>
+<header class="header">
+  <div class="container nav">
+    <a href="#" class="logo">Atelier <span>Belle</span></a>
     <nav>
       <a href="#produtos">Produtos</a>
       <a href="#sobre">Sobre</a>
       <a href="#contato">Contato</a>
     </nav>
-  </header>
+    <button class="cart-btn" id="cartBtn">Sacola <span id="cartCount">0</span></button>
+  </div>
+</header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-img" style="background-image:url('images/hero.jpg')"></div>
-    <div class="hero-content">
-      <span class="badge">Nova coleção • Frete grátis</span>
-      <h1>Looks que contam a sua história</h1>
-      <p>Peças selecionadas para o dia a dia: elegância, conforto e preço justo. Compre direto pela Shopee.</p>
-      <a href="#produtos" class="btn btn-primary">Ver produtos</a>
+<section class="hero">
+  <div class="container hero-inner">
+    <p class="eyebrow">Coleção 2026</p>
+    <h1>Elegância em cada peça</h1>
+    <p class="lead">Moda feminina premium com entrega para todo o Brasil. Tecidos selecionados, caimento impecável.</p>
+    <a href="#produtos" class="btn-primary">Ver coleção</a>
+  </div>
+</section>
+
+<section class="features container">
+  <div><strong>Frete grátis</strong><span>Acima de R$ 299</span></div>
+  <div><strong>Parcele em 6x</strong><span>Sem juros</span></div>
+  <div><strong>Troca fácil</strong><span>Em até 30 dias</span></div>
+  <div><strong>Pagamento seguro</strong><span>Pix, cartão e boleto</span></div>
+</section>
+
+<section class="products container" id="produtos">
+  <h2>Mais desejados</h2>
+  <div class="filters" id="filters"></div>
+  <div class="grid" id="productGrid"></div>
+</section>
+
+<section class="about container" id="sobre">
+  <h2>Sobre a Atelier Belle</h2>
+  <p>Somos uma marca brasileira dedicada a criar peças atemporais que valorizam a mulher moderna. Cada item da nossa coleção é pensado para unir conforto, qualidade e estilo.</p>
+</section>
+
+<footer id="contato">
+  <div class="container footer-inner">
+    <div>
+      <h3>Atelier Belle</h3>
+      <p>Moda feminina premium</p>
     </div>
-  </section>
-
-  <!-- PRODUTOS -->
-  <section id="produtos" class="products">
-    <h2>Mais desejados da semana</h2>
-    <p class="subtitle">Clique em “Comprar na Shopee” e veja as melhores opções selecionadas para você.</p>
-
-    <div class="grid">
-
-      <article class="card">
-        <div class="card-img">
-          <img src="images/blusa-branca.jpg" alt="Saia branca feminina elegante Praia" loading="lazy" width="768" height="960" />
-          <span class="tag">-30%</span>
-        </div>
-        <div class="card-body">
-          <h3>Saia branca feminina Praia</h3>
-          <p class="desc">Leve, clássica e versátil. Combina com jeans, saia e alfaiataria.</p>
-          <div class="price">
-            <span class="old">R$ 119,90</span>
-            <span class="new">R$ 79,90</span>
-          </div>
-          <button class="btn btn-buy" data-query="blusa branca feminina">Comprar na Shopee</button>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-img">
-          <img src="images/saia-jeans.jpg" alt="Saia jeans feminina moderna" loading="lazy" width="768" height="960" />
-          <span class="tag">Top vendas</span>
-        </div>
-        <div class="card-body">
-          <h3>Saia Jeans Feminina</h3>
-          <p class="desc">Cintura alta, modelagem que valoriza a silhueta. Ideal para o dia a dia.</p>
-          <div class="price">
-            <span class="old">R$ 149,90</span>
-            <span class="new">R$ 99,90</span>
-          </div>
-          <button class="btn btn-buy" data-query="saia jeans feminina cintura alta">Comprar na Shopee</button>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-img">
-          <img src="images/calca-preta.jpg" alt="Blusa Azul feminina Top" loading="lazy" width="768" height="960" />
-          <span class="tag">Novo</span>
-        </div>
-        <div class="card-body">
-          <h3>Blusa Azul feminina (Top)</h3>
-          <p class="desc">Modelagem alfaiataria, caimento perfeito. Do trabalho ao happy hour.</p>
-          <div class="price">
-            <span class="old">R$ 179,90</span>
-            <span class="new">R$ 119,90</span>
-          </div>
-          <button class="btn btn-buy" data-query="calca preta feminina alfaiataria">Comprar na Shopee</button>
-        </div>
-      </article>
-
+    <div>
+      <h4>Contato</h4>
+      <p>contato@atelierbelle.com.br</p>
+      <p>(11) 90000-0000</p>
     </div>
-  </section>
+    <div>
+      <h4>Atendimento</h4>
+      <p>Seg a Sex — 9h às 18h</p>
+    </div>
+  </div>
+  <p class="copy">© 2026 Atelier Belle. Todos os direitos reservados.</p>
+</footer>
 
-  <!-- BENEFÍCIOS -->
-  <section class="benefits">
-    <div><strong>🚚 Frete grátis</strong><span>Acima de R$ 99</span></div>
-    <div><strong>🔒 Compra segura</strong><span>Direto pela Shopee</span></div>
-    <div><strong>↩️ Troca fácil</strong><span>Em até 7 dias</span></div>
-    <div><strong>⭐ +10 mil clientes</strong><span>Satisfeitas</span></div>
-  </section>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <h3>Sua sacola</h3>
+    <button id="closeCart">×</button>
+  </div>
+  <div id="cartItems"></div>
+  <div class="cart-foot">
+    <div class="total">Total: <span id="cartTotal">R$ 0,00</span></div>
+    <button class="btn-primary" onclick="alert('Checkout em breve!')">Finalizar compra</button>
+  </div>
+</div>
+<div class="overlay" id="overlay"></div>
 
-  <!-- SOBRE -->
-  <section id="sobre" class="about">
-    <h2>Sobre a Atelier Lumi</h2>
-    <p>Somos uma curadoria de moda feminina que conecta você às melhores peças da Shopee. Cada item é selecionado pensando em qualidade, estilo e preço acessível.</p>
-  </section>
-
-  <footer id="contato">
-    <p>© <span id="year"></span> Atelier Lumi — Todos os direitos reservados.</p>
-    <p class="small">Este site direciona para vendedores parceiros na Shopee.</p>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
